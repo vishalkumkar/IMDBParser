@@ -155,3 +155,5 @@ IMPROVEMENTS:
    a. TRIE  ( space vs time )
    
 8. Every time this code runs, it creates in memory hashmap and searches it. rather we can store hashmap serialized and load it too.
+
+9. Output of API could be json. + we can put a simple web container and expose it as REST API.
