@@ -9,7 +9,12 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 public class IMDBCreditPageParser {
-	
+
+	public static void main(String[] args) {		
+		IMDBCreditPageParser parser = new IMDBCreditPageParser();
+		parser.recordNames("https://www.imdb.com/title/tt0111161/fullcredits/?ref_=tt_ov_st_sm");
+	}
+
 	public MovieDetails recordNames( String URL ) 
 	{
 		MovieDetails movie = new MovieDetails();

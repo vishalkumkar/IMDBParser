@@ -55,4 +55,19 @@ public class IMDBNextPageParser {
 	public HashSet<String> getVisitedPages() {
 		return visitedPages;
 	}
+
+
+	public static void main(String[] args) {
+		//		System.setProperty("http.proxyHost", "www-proxy.us.oracle.com");
+		//		System.setProperty("http.proxyPort", "80");
+		//		System.setProperty("https.proxyHost", "www-proxy.us.oracle.com");
+		//		System.setProperty("https.proxyPort", "80");
+		//		System.setProperty("http.nonProxyHosts", "*.us.oracle.com|*.oraclecorp.com");
+
+		System.out.println("/title/tt0015324/?ref_=adv_li_i".substring(7, 16));
+		IMDBNextPageParser d = new IMDBNextPageParser();
+		d.storeMovieCreditPage("https://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple");
+		System.out.println(d.links.size());
+		System.out.println(d.links);
+	}
 }
