@@ -8,12 +8,6 @@ import com.ferris.parser.impl.SearchPeopleImpl;
 public class IMDBSearchAPIs extends BuildIndex {
 
 	public static void main(String[] args) {
-		//		System.setProperty("http.proxyHost", "www-proxy.us.oracle.com");
-		//		System.setProperty("http.proxyPort", "80");
-		//		System.setProperty("https.proxyHost", "www-proxy.us.oracle.com");
-		//		System.setProperty("https.proxyPort", "80");
-		//		System.setProperty("http.nonProxyHosts", "*.us.oracle.com|*.oraclecorp.com");
-
 		crawlAndbuildDataStructure("https://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple");
 
 		SearchPeopleImpl store = SearchPeopleImpl.getInstance();
