@@ -6,6 +6,7 @@ Run class
 com.ferris.parser.main.IMDBSearchAPIs
 
 ======================================
+
 the data structure is build for following categories:
 1. Directed By
 2. Produced By
@@ -71,7 +72,7 @@ Note: Chris Hemsworth, will have 3 entries and storage of key will always be in 
   
 	d. getMoviesCastedBy(name) - searches in cast categories
   
-	e  getMoviesBy(name)         - searches in all categories without performing any intersection of lists
+	e  getMoviesBy(name)        - searches in all categories without performing any intersection of lists
   
 	f. getMovieListBy(name)  -  searches in all categories. Performs intersection of all lists 
   
@@ -111,7 +112,7 @@ Note: Chris Hemsworth, will have 3 entries and storage of key will always be in 
 	
 IMPROVEMENTS:
 
-1. Code could be bit more Structured eg: using design patterns etc, adding comments
+1. Code could be bit more Structured eg: using design patterns etc, adding comments, test cases
 
 2. Parsing could be improved.
 
@@ -119,7 +120,7 @@ IMPROVEMENTS:
 
    Threads are currently fixed at 15, so that IMDB do not block IP (Rate Limiting)
    
-3. If the movies list is sorted we can use heap based approach to find intersection of n lists.
+4. If the movies list is sorted we can use heap based approach to find intersection of n lists.
 
 	 for n words, there will be n lists
    
@@ -135,3 +136,12 @@ IMPROVEMENTS:
  	 			  
 	 Space Complexity O( n ) 
  
+5. If there is memory constraint, then we have to store the hashmap datastructure on disk ( serialized ) , and store most frequent queried keys in memory ( LRU implementation ).
+
+6. Furthur, we can improve this code to build n-gram index.
+
+7. Performance benmarking for different techniques. we can try building
+
+   a. TRIE  ( space vs time )
+   
+   

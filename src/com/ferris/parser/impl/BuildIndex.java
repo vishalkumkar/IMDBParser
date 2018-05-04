@@ -21,7 +21,7 @@ public class BuildIndex {
 		pageParser.storeMovieCreditPage( startURL );
 	
 		System.out.println("-----------------------------------------------------------------------------");
-		System.out.println("               Hang Tight.. Parsing All Pages");
+		System.out.println("               Hang Tight.. Parsing All Pages, Building HashMap");
 		System.out.println("-----------------------------------------------------------------------------");
 
 		final IMDBCreditPageParser recordNames = new IMDBCreditPageParser();
