@@ -1,5 +1,15 @@
 How to Run:
 
+1. Direct from jar:
+
+java -jar imdbsearch.jar "https://www.imdb.com/search/title?groups=top_1000&sort=user_rating&view=simple" "spielberg hanks"
+
+Note: the above jars just exposes 1 search api.
+
+For other api's for search check class com.ferris.parser.main.IMDBSearchAPIs
+
+2. if running from eclipse :
+
 Make sure jsoup-1.11.3.jar is available in classpath for code compilation.
 
 Run class 
